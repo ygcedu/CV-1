@@ -1,9 +1,7 @@
+/*reset*/
 * {margin: 0;padding: 0;}
-
 * {box-sizing: border-box;}
-
 *::before {box-sizing: border-box;}
-
 *::after {box-sizing: border-box;}
 
 #div1 {
@@ -28,6 +26,30 @@
     display: block;
     position: absolute;
     /*border: 1px solid red;*/
+}
+
+/*自动换行*/
+#container {
+    word-break: break-all;
+}
+
+/*媒体查询（手机特殊处理）*/
+@media (max-width: 500px) {
+    #container {
+        height: 70vh;
+        overflow: auto;
+    }
+
+    #div1Wrapper {
+        /*div套一层div1Wrapper是为了避免设置高度与div冲突*/
+        height: 30vh;
+    }
+
+    #div1 {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
 }
 
 

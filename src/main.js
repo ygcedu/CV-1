@@ -84,6 +84,8 @@ let step = () => {
         // 实时添加样式
         style.innerHTML = text.substring(0, n);
 
+        window.scrollTo(0, 99999);
+        container.scrollTo(0, 99999);
         if (n < text.length - 1) {
             // 如果n不是text的最后一个字符就继续递归
             n += 1;
