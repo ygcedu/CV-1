@@ -1,2 +1,69 @@
+* {margin: 0;padding: 0;}
+
+* {box-sizing: border-box;}
+
+*::before {box-sizing: border-box;}
+
+*::after {box-sizing: border-box;}
+
+#div1 {
+    position: fixed;
+    /*div在页面居中显示*/
+    left: 50%;
+    /*div圆形在页面居中显示*/
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+#div1::before {
+    /*内容为空但不能没有*/
+    content: "";
+    display: block;
+    position: absolute;
+    /*border: 1px solid red;*/
+}
+
+#div1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    /*border: 1px solid red;*/
+}
 
 
+/*#div1 {
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    border:none;
+}*/
+
+/*#div1{
+    !*黑白渐变*!
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}*/
+
+/*上黑*/
+/*#div1::before{
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    border-radius: 50%;
+    !*放射渐变模拟鱼眼*!
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
+}*/
+
+/*下白*/
+/*
+#div1::after{
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%, rgba(0,0,0,1) 100%);
+}*/
